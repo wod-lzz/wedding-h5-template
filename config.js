@@ -8,7 +8,7 @@ window.WEDDING_CONFIG = {
   address: "东京都千代田区丸之内 1-1-1",
   mapUrl: "https://map.qq.com/?type=marker&isopeninfowin=1&markertype=1&name=%E4%B8%9C%E4%BA%AC%E8%8A%B1%E5%9B%AD%E9%85%92%E5%BA%97&point=35.681236,139.767125",
   tencentMap: {
-    key: "",
+    key: "37JBZ-GJR64-LFIU5-KYOL3-3MWDE-GRBXR",
     latitude: 35.681236,
     longitude: 139.767125,
     zoom: 16
