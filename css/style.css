@@ -428,7 +428,308 @@ footer p {
         margin: 30px auto;
         border-radius: 25px
     }
+}
 
+/* Shiny pearl finish */
+:root {
+    --cream: #fff9f6;
+    --cocoa: #513941;
+    --gold: #c49762;
+    --rose: #d88791;
+    --pearl: #fffdfb;
+    --glass: #fffaf8b8;
+}
+
+body {
+    min-height: 100svh;
+    background:
+        radial-gradient(circle at 8% 5%, #fff8f4 0 8%, transparent 28%),
+        radial-gradient(circle at 91% 28%, #f5d6d7 0 4%, transparent 22%),
+        linear-gradient(145deg, #e8c9c7, #f8e7d7 45%, #d9b6bb);
+}
+
+main {
+    position: relative;
+    background: var(--cream);
+    box-shadow: 0 25px 90px #53323a42, 0 1px 0 #fff inset;
+}
+
+main::before {
+    content: "";
+    position: absolute;
+    z-index: 4;
+    inset: 0;
+    pointer-events: none;
+    background: linear-gradient(115deg, #fff0 34%, #ffffff24 45%, #fff0 57%);
+    mix-blend-mode: soft-light;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    width: 72vmax;
+    height: 17vmax;
+    top: 10%;
+    left: -22%;
+    transform: rotate(-30deg);
+    background: linear-gradient(90deg, transparent, #fff8, transparent);
+    filter: blur(12px);
+    opacity: .7;
+    animation: gleam 8s ease-in-out infinite;
+}
+
+.shade {
+    z-index: 1;
+    background:
+        radial-gradient(circle at 50% 15%, #fff2e426, transparent 28%),
+        linear-gradient(180deg, #2c17200d 20%, #2d172486 100%);
+}
+
+.heroText {
+    z-index: 2;
+    padding-bottom: 48px;
+}
+
+.heroText>p:first-child {
+    padding: 7px 13px;
+    border: 1px solid #ffffff80;
+    border-radius: 20px;
+    background: #ffffff1a;
+    box-shadow: 0 1px 0 #ffffff70 inset;
+    backdrop-filter: blur(8px);
+}
+
+.hero h1 {
+    text-shadow: 0 2px 18px #2c142766;
+}
+
+.dateBox {
+    margin: 7px 0 12px;
+    border-color: #ffffffad;
+    background: #ffffff14;
+    box-shadow: 0 1px 0 #ffffff80 inset, 0 8px 24px #27111c2e;
+    backdrop-filter: blur(10px);
+}
+
+.heroText button,
+.actions button,
+.rsvp form>button {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform .2s ease, box-shadow .2s ease, filter .2s ease;
+}
+
+.heroText button {
+    margin-top: 8px;
+    border-color: #fff;
+    background: linear-gradient(135deg, #fff8, #ffffff2b);
+    box-shadow: 0 1px 1px #fff8 inset, 0 8px 20px #25121b3b;
+    backdrop-filter: blur(10px);
+}
+
+.heroText button::after,
+.rsvp form>button::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    transform: translateX(-125%) skewX(-25deg);
+    background: linear-gradient(90deg, transparent, #fff9, transparent);
+    animation: button-shine 4s ease-in-out infinite;
+}
+
+.heroText button:hover,
+.actions button:hover,
+.rsvp form>button:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.05);
+}
+
+.paper {
+    position: relative;
+    background:
+        radial-gradient(circle at 15% 3%, #ffffff, transparent 26%),
+        radial-gradient(circle at 90% 18%, #f9dfe0a6, transparent 31%),
+        linear-gradient(155deg, #fffdfb, #fff5ef 58%, #fae9e8);
+}
+
+section {
+    position: relative;
+    border-color: #d9bd984d;
+}
+
+section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 13%;
+    right: 13%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #d7a979a8, transparent);
+}
+
+section:first-child::before {
+    display: none;
+}
+
+h2 {
+    color: #804c57;
+    text-shadow: 0 1px 0 #fff;
+}
+
+.ornament,
+section>em,
+.sign {
+    color: var(--rose);
+}
+
+.details,
+.rsvp {
+    background:
+        linear-gradient(135deg, #ffffff8f, #f7dfe494),
+        radial-gradient(circle at 90% 0, #fff, transparent 30%);
+    box-shadow: 0 1px 0 #fff inset, 0 -1px 0 #fff7 inset;
+}
+
+.calendar {
+    position: relative;
+    border-color: #d79da1;
+    background: radial-gradient(circle at 32% 24%, #fff, #fff6f4 60%, #f6dfe0);
+    box-shadow: 0 8px 23px #a9677440, 0 2px 2px #fff inset;
+}
+
+.calendar::after {
+    content: "";
+    position: absolute;
+    inset: 8px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.calendar b,
+.countdown,
+.schedule b,
+.venue a {
+    color: #a85463;
+}
+
+.venue {
+    border-color: #e7c1bd;
+    border-radius: 5px;
+    background: #ffffff73;
+    box-shadow: 0 1px 0 #fff inset, 0 10px 24px #81465312;
+    backdrop-filter: blur(7px);
+}
+
+.puzzle {
+    border-color: #e0acaa;
+    border-radius: 8px;
+    background: #fff9f6;
+    box-shadow: 0 15px 35px #75424d2b, 0 2px 1px #fff inset;
+}
+
+.tile {
+    border-radius: 4px;
+}
+
+.empty {
+    color: #c46b79;
+    background: linear-gradient(145deg, #ffe5e5, #f9cfd2);
+}
+
+.actions button {
+    border-color: #e2a7a4;
+    color: #914d59;
+    background: linear-gradient(135deg, #fff, #fae2df);
+    box-shadow: 0 1px 0 #fff inset, 0 5px 14px #75404c1c;
+}
+
+.rsvp input,
+.rsvp select,
+.rsvp textarea {
+    border: 1px solid #e8c6c2;
+    border-radius: 5px;
+    background: #ffffffa8;
+    box-shadow: 0 1px 0 #fff inset;
+    outline-color: #c66d7a;
+    transition: border-color .2s, box-shadow .2s;
+}
+
+.rsvp input:focus,
+.rsvp select:focus,
+.rsvp textarea:focus {
+    border-color: #c66d7a;
+    box-shadow: 0 0 0 3px #d98b9540, 0 1px 0 #fff inset;
+}
+
+.rsvp form>button {
+    border-radius: 5px;
+    background: linear-gradient(120deg, #a94e60, #d2767d 48%, #a94e60);
+    box-shadow: 0 2px 0 #f4b7bb inset, 0 8px 18px #8b39453d;
+}
+
+.rsvp #thanks {
+    border-color: #e4b4b5;
+    background: #fffaf8bf;
+    box-shadow: 0 1px 0 #fff inset;
+}
+
+footer {
+    position: relative;
+    overflow: hidden;
+    background:
+        radial-gradient(circle at 48% -12%, #eeb9ae 0, transparent 35%),
+        linear-gradient(145deg, #5c3443, #8b4858 57%, #633946);
+}
+
+footer::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(112deg, transparent 33%, #ffffff1c 46%, transparent 59%);
+}
+
+footer h2 {
+    color: #ffe5d8;
+}
+
+.modal {
+    background: #3d1e2ab8;
+    backdrop-filter: blur(11px);
+}
+
+.modal>div {
+    border: 1px solid #fff9;
+    border-radius: 8px;
+    background: linear-gradient(145deg, #fff, #fce7e4);
+    box-shadow: 0 20px 60px #32141b73, 0 1px 0 #fff inset;
+}
+
+.modal button {
+    color: #884653;
+    background: #ffffffdd;
+    box-shadow: 0 2px 7px #4a202930;
+}
+
+@keyframes gleam {
+    0%, 100% { transform: translateX(-14%) rotate(-30deg); opacity: .25; }
+    50% { transform: translateX(66%) rotate(-30deg); opacity: .8; }
+}
+
+@keyframes button-shine {
+    0%, 60% { transform: translateX(-125%) skewX(-25deg); }
+    85%, 100% { transform: translateX(145%) skewX(-25deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .hero::after,
+    .heroText button::after,
+    .rsvp form>button::after { animation: none; }
+}
+
+@media(min-width:700px) {
     .hero {
         height: 820px;
         min-height: 0

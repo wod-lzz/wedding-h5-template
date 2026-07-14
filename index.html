@@ -1,21 +1,83 @@
 <!doctype html>
 <html lang="zh-CN">
+
 <head>
-  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-  <meta name="theme-color" content="#684c48"><title>我们的婚礼</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#684c48">
+  <title>我们的婚礼</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
   <main>
-    <section class="hero"><img id="heroPhoto" alt="新人婚礼照片"><div class="shade"></div><div class="heroText"><p>WE ARE GETTING MARRIED</p><h1><span data-groom></span> <i>&amp;</i> <span data-bride></span></h1><div class="dateBox"><span>OCT</span><b>18</b><span>2026</span></div><p>诚挚邀请您 · 见证我们的幸福</p><button id="openBtn">开启请柬⌄</button></div></section>
+    <section class="hero"><img id="heroPhoto" alt="新人婚礼照片">
+      <div class="shade"></div>
+      <div class="heroText">
+        <p>WE ARE GETTING MARRIED</p>
+        <h1><span data-groom></span> <i>&amp;</i> <span data-bride></span></h1>
+        <div class="dateBox"><span>OCT</span><b>18</b><span>2026</span></div>
+        <p>诚挚邀请您 · 见证我们的幸福</p><button id="openBtn">开启请柬⌄</button>
+      </div>
+    </section>
     <div class="paper" id="invitation">
-      <section><div class="ornament">❦ ♡ ❦</div><em>TOGETHER WITH OUR FAMILIES</em><h2>我们的婚礼</h2><p class="lead">从怦然心动，到相伴余生<br>所有美好，都想与你一同见证</p><p id="inviteText" class="copy"></p><div class="sign"><span data-groom></span> &amp; <span data-bride></span></div></section>
-      <section class="details"><em>SAVE THE DATE</em><h2>婚礼信息</h2><div class="countdown" id="countdown"></div><div class="calendar"><small>婚礼日期</small><b>18</b><small id="dateDisplay"></small></div><div id="schedule" class="schedule"></div><div class="venue"><small>WEDDING VENUE</small><h3 id="venue"></h3><p id="address"></p><a id="mapLink" target="_blank" rel="noreferrer">查看地图导航 ↗</a></div></section>
-      <section><em>A LITTLE SURPRISE</em><h2>拼出幸福瞬间</h2><p class="hint">点击空白格相邻的图片，拼出我们的回忆</p><div class="stats"><span>用时 <b id="timer">00:00</b></span><span>步数 <b id="steps">0</b></span></div><div class="puzzle" id="puzzle"></div><div class="actions"><button id="reset">↻ 重新开始</button><button id="original">查看原图</button></div></section>
-      <section class="rsvp"><em>WILL YOU JOIN US?</em><h2>出席回执</h2><p class="hint">演示版默认保存在当前设备；配置接口后可提交到服务器</p><form id="rsvpForm"><label>您的姓名<input name="name" required placeholder="请输入姓名"></label><label>是否出席<select name="attendance" required><option value="">请选择</option><option>欣然出席</option><option>遗憾无法出席</option></select></label><label>同行人数<select name="guests"><option>仅本人</option><option>携带 1 位</option><option>携带 2 位</option></select></label><label>祝福或备注<textarea name="message" rows="3"></textarea></label><button type="submit">发送回执</button></form><div id="thanks" hidden><h3>♡ 感谢您的回复</h3><p>期待在婚礼现场与您相见</p></div></section>
-      <footer><div class="ornament">❦ ♡ ❦</div><h2>期待与你相见</h2><p><span data-groom></span> &amp; <span data-bride></span> · <span id="footerDate"></span></p></footer>
+      <section>
+        <div class="ornament">❦ ♡ ❦</div><em>TOGETHER WITH OUR FAMILIES</em>
+        <h2>我们的婚礼</h2>
+        <p class="lead">从怦然心动，到相伴余生<br>所有美好，都想与你一同见证</p>
+        <p id="inviteText" class="copy"></p>
+        <div class="sign"><span data-groom></span> &amp; <span data-bride></span></div>
+      </section>
+      <section class="details"><em>SAVE THE DATE</em>
+        <h2>婚礼信息</h2>
+        <div class="countdown" id="countdown"></div>
+        <div class="calendar"><small>婚礼日期</small><b>18</b><small id="dateDisplay"></small></div>
+        <div id="schedule" class="schedule"></div>
+        <div class="venue"><small>WEDDING VENUE</small>
+          <h3 id="venue"></h3>
+          <p id="address"></p><a id="mapLink" target="_blank" rel="noreferrer">查看地图导航 ↗</a>
+        </div>
+      </section>
+      <section><em>A LITTLE SURPRISE</em>
+        <h2>拼出幸福瞬间</h2>
+        <p class="hint">点击空白格相邻的图片，拼出我们的回忆</p>
+        <div class="stats"><span>用时 <b id="timer">00:00</b></span><span>步数 <b id="steps">0</b></span></div>
+        <div class="puzzle" id="puzzle"></div>
+        <div class="actions"><button id="reset">↻ 重新开始</button><button id="original">查看原图</button></div>
+      </section>
+      <section class="rsvp"><em>WILL YOU JOIN US?</em>
+        <h2>出席回执</h2>
+        <p class="hint">演示版默认保存在当前设备；配置接口后可提交到服务器</p>
+        <form id="rsvpForm"><label>您的姓名<input name="name" required placeholder="请输入姓名"></label><label>是否出席<select
+              name="attendance" required>
+              <option value="">请选择</option>
+              <option>欣然出席</option>
+              <option>遗憾无法出席</option>
+            </select></label><label>同行人数<select name="guests">
+              <option>仅本人</option>
+              <option>携带 1 位</option>
+              <option>携带 2 位</option>
+            </select></label><label>祝福或备注<textarea name="message" rows="3"></textarea></label><button
+            type="submit">发送回执</button></form>
+        <div id="thanks" hidden>
+          <h3>♡ 感谢您的回复</h3>
+          <p>期待在婚礼现场与您相见</p>
+        </div>
+      </section>
+      <footer>
+        <div class="ornament">❦ ♡ ❦</div>
+        <h2>期待与你相见</h2>
+        <p><span data-groom></span> &amp; <span data-bride></span> · <span id="footerDate"></span></p>
+      </footer>
     </div>
   </main>
-  <div class="modal" id="modal" hidden><div><button id="close">×</button><img id="originalPhoto" alt="拼图原图"><p>记住这张照片，再完成拼图吧</p></div></div>
-  <script src="config.js"></script><script src="js/app.js"></script>
-</body></html>
+  <div class="modal" id="modal" hidden>
+    <div><button id="close">×</button><img id="originalPhoto" alt="拼图原图">
+      <p>记住这张照片，再完成拼图吧</p>
+    </div>
+  </div>
+  <script src="config.js"></script>
+  <script src="js/app.js"></script>
+</body>
+
+</html>
