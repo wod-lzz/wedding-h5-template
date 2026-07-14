@@ -35,7 +35,12 @@
         <div id="schedule" class="schedule"></div>
         <div class="venue"><small>WEDDING VENUE</small>
           <h3 id="venue"></h3>
-          <p id="address"></p><a id="mapLink" target="_blank" rel="noreferrer">查看地图导航 ↗</a>
+          <p id="address"></p>
+          <div id="tencentMap" class="tencent-map" hidden aria-label="婚礼地点地图"></div>
+          <a id="mapLink" class="map-preview" target="_blank" rel="noreferrer" aria-label="打开婚礼地点导航">
+            <img id="mapPreview" alt="婚礼地点地图缩略图" hidden>
+            <span class="map-preview-info"><small>WEDDING LOCATION</small><strong>查看地图导航</strong><i aria-hidden="true">↗</i></span>
+          </a>
         </div>
       </section>
       <section><em>A LITTLE SURPRISE</em>

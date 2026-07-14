@@ -6,7 +6,13 @@ window.WEDDING_CONFIG = {
   city: "TOKYO",
   venue: "东京花园酒店 · 光之厅",
   address: "东京都千代田区丸之内 1-1-1",
-  mapUrl: "https://www.google.com/maps/search/?api=1&query=Tokyo+Station",
+  mapUrl: "https://map.qq.com/?type=marker&isopeninfowin=1&markertype=1&name=%E4%B8%9C%E4%BA%AC%E8%8A%B1%E5%9B%AD%E9%85%92%E5%BA%97&point=35.681236,139.767125",
+  tencentMap: {
+    key: "",
+    latitude: 35.681236,
+    longitude: 139.767125,
+    zoom: 16
+  },
   photo: "assets/wedding-photo.webp",
   invitation: "我们决定携手走进人生的新篇章。诚挚邀请您莅临婚礼，与我们分享这份喜悦。",
   schedule: [
